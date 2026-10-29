@@ -341,7 +341,7 @@ def home():
     message = ""
 
 
-    # ADD PAYMENT
+    
 
     if request.method == "POST":
 
@@ -366,7 +366,7 @@ def home():
         message = "Payment added successfully!"
 
 
-    # VIEW DUES
+    
 
     due_student_id = request.args.get(
         "due_student_id"
@@ -397,7 +397,7 @@ def home():
             pending_fee = 0
 
 
-    # REPORT
+    
 
     total_transactions = len(payments)
 
@@ -451,6 +451,6 @@ if __name__ == "__main__":
 
     app.run(
         host="0.0.0.0",
-        port=5002,
+        port=5000,
         debug=True
     )
