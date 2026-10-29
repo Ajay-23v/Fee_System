@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fee-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fee-system
+  template:
+    metadata:
+      labels:
+        app: fee-system
+    spec:
+      containers:
+        - name: fee-system
+          image: fee-system:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
